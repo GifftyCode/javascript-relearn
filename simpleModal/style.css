@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTO26hATF5sestTWqlX2kbDmm6qpcI3c9apw&s");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+#openModal {
+  padding: 0.8rem 2rem;
+  background-color: teal;
+  color: white;
+  margin: 4rem;
+  border: none;
+  font-size: large;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#openModal:hover {
+  background-color: darkolivegreen;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  z-index: 100;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  z-index: 200;
+}
+
+.modal__content h1 {
+  margin-top: 0;
+}
+
+.modal__content p {
+  line-height: 1.6;
+}
+.modal,
+.modal__overlay {
+  display: none;
+}
+
+.modal.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__overlay.open {
+  display: block;
+}
